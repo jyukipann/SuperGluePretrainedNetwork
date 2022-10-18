@@ -106,6 +106,7 @@ if __name__ == "__main__":
 
     # out_matches = match_pair(gray_rgb_path, fir_path, resize)
     out_matches = match_pair(gray_rgb_path, gray_rgb_path, resize)
+    gray_rgb_path.unlink()
 
     rgb_pt = out_matches["keypoints0"].astype(int)
     fir_pt = out_matches["keypoints1"].astype(int)
